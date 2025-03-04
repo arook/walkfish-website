@@ -30,3 +30,4 @@ jobs:
         with:
           commit_message: 'chore: Compile Sass to CSS'
           file_pattern: styles.css
+          github_token: ${{ secrets.PAT }} # Use the PAT secret
