@@ -10,21 +10,34 @@ body {
 }
 
 .site-header {
-  background-color: $primary-color;
-  color: white;
-  padding: 1rem;
+  background-color: $header-background;
+  color: $text-color;
+  padding: 1.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $primary-color;
+  }
 
   a {
-    color: white;
+    color: $text-color;
     text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $primary-color;
+    }
   }
 
   nav {
     a {
-      margin-left: 1rem;
+      margin-left: 1.5rem;
+      font-weight: 500;
     }
   }
 }
@@ -34,10 +47,16 @@ body {
 }
 
 .site-footer {
-  background-color: $secondary-color;
+  background-color: $footer-background;
   color: white;
   text-align: center;
-  padding: 1rem;
+  padding: 2rem;
+  margin-top: 4rem;
+
+  p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
 }
 
 .home {
@@ -50,7 +69,7 @@ body {
   background-position: center;
   color: white;
   text-align: center;
-  padding: 12rem 2rem;
+  padding: 15rem 2rem;
   position: relative;
   overflow: hidden;
 
@@ -61,7 +80,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%);
     z-index: 1;
   }
 
@@ -71,28 +90,58 @@ body {
   }
 
   h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    font-weight: 700;
   }
 
   p {
-    font-size: 1.75rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    margin-bottom: 2.5rem;
+  }
+
+  .cta-button {
+    background-color: $accent-color;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+
+    &:hover {
+      background-color: darken($accent-color, 10%);
+    }
   }
 }
 
 .card {
   background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out;
+  border: none;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: $text-color;
+  }
+
+  p {
+    color: $secondary-color;
+    line-height: 1.6;
   }
 }
 
@@ -146,6 +195,22 @@ form {
     &:hover {
       background-color: darken($accent-color, 10%);
     }
+  }
+}
+
+// Featured Products Section
+.featured-products {
+  padding: 4rem 2rem;
+  text-align: center;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: $text-color;
+  }
+
+  .grid {
+    // ...existing code...
   }
 }
 
