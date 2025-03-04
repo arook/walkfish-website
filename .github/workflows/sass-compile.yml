@@ -16,7 +16,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.x' # or your preferred Ruby version
+          ruby-version: '3.2' # or a specific, supported Ruby version
           bundler-cache: true # ensures that dependencies are cached
 
       - name: Install Sass
