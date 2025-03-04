@@ -11,18 +11,62 @@ title: 迷你电脑
 </div>
 
 <div class="site-content">
+  <h2>Intel Processors</h2>
   <div class="grid">
-    <div class="col">
-      <div class="card">
-        <h2>Product 1</h2>
-        <p>Description of product 1.</p>
+    {% assign intel_products = "
+      Intel Mini PC 1,Intel Mini PC 2,Intel Mini PC 3,Intel Mini PC 4,Intel Mini PC 5,Intel Mini PC 6,Intel Mini PC 7,Intel Mini PC 8,
+      Intel Mini PC 9,Intel Mini PC 10,Intel Mini PC 11,Intel Mini PC 12,Intel Mini PC 13,Intel Mini PC 14,Intel Mini PC 15,Intel Mini PC 16,
+      Intel Mini PC 17,Intel Mini PC 18,Intel Mini PC 19,Intel Mini PC 20
+    " | split: ',' %}
+    {% for product in intel_products %}
+      <div class="col" style="width: 23%; margin-bottom: 1rem;">
+        <div class="card" style="padding: 0.5rem;">
+          <img src="https://via.placeholder.com/200x150" alt="{{ product }}" style="width: 100%;">
+          <h3 style="font-size: 1rem; text-align: center;">{{ product }}</h3>
+        </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <h2>Product 2</h2>
-        <p>Description of product 2.</p>
+      {% if forloop.index0 == 3 or forloop.index0 == 7 or forloop.index0 == 11 or forloop.index0 == 15 %}
+        </div><div class="grid">
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <h2>AMD Processors</h2>
+  <div class="grid">
+    {% assign amd_products = "
+      AMD Mini PC A1,AMD Mini PC A2,AMD Mini PC A3,AMD Mini PC A4,AMD Mini PC A5,AMD Mini PC A6,AMD Mini PC A7,AMD Mini PC A8,
+      AMD Mini PC A9,AMD Mini PC A10,AMD Mini PC A11,AMD Mini PC A12,AMD Mini PC A13,AMD Mini PC A14,AMD Mini PC A15,AMD Mini PC A16,
+      AMD Mini PC A17,AMD Mini PC A18,AMD Mini PC A19,AMD Mini PC A20,AMD Mini PC A21,AMD Mini PC A22,AMD Mini PC A23
+    " | split: ',' %}
+    {% for product in amd_products %}
+      <div class="col" style="width: 23%; margin-bottom: 1rem;">
+        <div class="card"  style="padding: 0.5rem;">
+          <img src="https://via.placeholder.com/200x150" alt="{{ product }}" style="width: 100%;">
+          <h3 style="font-size: 1rem; text-align: center;">{{ product }}</h3>
+        </div>
       </div>
-    </div>
+      {% if forloop.index0 == 3 or forloop.index0 == 7 or forloop.index0 == 11 or forloop.index0 == 15 %}
+        </div><div class="grid">
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <h2>Loongson Processors</h2>
+  <div class="grid">
+    {% assign loongson_products = "
+      Loongson Mini PC L1,Loongson Mini PC L2,Loongson Mini PC L3,Loongson Mini PC L4,Loongson Mini PC L5,Loongson Mini PC L6,Loongson Mini PC L7,Loongson Mini PC L8,
+      Loongson Mini PC L9,Loongson Mini PC L10,Loongson Mini PC L11,Loongson Mini PC L12,Loongson Mini PC L13,Loongson Mini PC L14,Loongson Mini PC L15
+    " | split: ',' %}
+    {% for product in loongson_products %}
+      <div class="col" style="width: 23%; margin-bottom: 1rem;">
+        <div class="card" style="padding: 0.5rem;">
+          <img src="https://via.placeholder.com/200x150" alt="{{ product }}" style="width: 100%;">
+          <h3 style="font-size: 1rem; text-align: center;">{{ product }}</h3>
+        </div>
+      </div>
+      {% if forloop.index0 == 3 or forloop.index0 == 7 or forloop.index0 == 11 or forloop.index0 == 15 %}
+        </div><div class="grid">
+      {% endif %}
+    {% endfor %}
   </div>
 </div>
