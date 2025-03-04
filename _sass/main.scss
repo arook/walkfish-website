@@ -1,0 +1,132 @@
+@import "variables";
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+.site-header {
+  background-color: $primary-color;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  nav {
+    a {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.site-content {
+  padding: 2rem;
+}
+
+.site-footer {
+  background-color: $secondary-color;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.home {
+  text-align: center;
+}
+
+.hero {
+  background-image: url('/images/hero-bg.jpg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 10rem 2rem;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  .col {
+    flex: 1;
+    min-width: 300px; /* Adjust as needed */
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+
+  label {
+    margin-top: 1rem;
+  }
+
+  input,
+  textarea {
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  button {
+    background-color: $primary-color;
+    color: white;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+}
+
+// Optional: Style for README content
+.readme-content {
+  padding: 2rem;
+  font-family: sans-serif;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+
+  code {
+    background-color: #eee;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+  }
+}
