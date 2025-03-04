@@ -1,4 +1,4 @@
-# Walkfish Website
+# Walkfish
 
 ## Deployment Instructions
 
